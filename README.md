@@ -31,4 +31,11 @@ npm run build
 =======
 # ww_shop
 商城前端项目
->>>>>>> f8e8d103266f67ccb4353302c0aa8d7e08b79f84
+
+# 展示图片
+![image](https://github.com/ren2112/ww_shop/blob/main/%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/1.png)
+![image](https://github.com/ren2112/ww_shop/blob/main/%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/2.png)
+![image](https://github.com/ren2112/ww_shop/blob/main/%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/3.png)
+![image](https://github.com/ren2112/ww_shop/blob/main/%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/4.png)
+
+
