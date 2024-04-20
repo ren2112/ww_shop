@@ -1,5 +1,11 @@
 <script setup>
-
+import { useUserStore } from '@/stores/userStore';
+import router from '@/router';
+const userStore=useUserStore()
+const confirm=()=>{
+    userStore.clearUserInfo()
+    router.push('/login')
+}
 </script>
 
 <template>
@@ -7,15 +13,15 @@
     <nav class="app-topnav">
         <div class="container">
             <ul>
-                <template v-if="true">
+                <template v-if="userStore.userInfo.token">
                     <li>
                         <!-- 这种用法表示希望在用户点击链接时执行一段内联JavaScript代码 -->
                         <a href="javascript:;">
-                            <i class="iconfont icon-user"></i>周杰伦
+                            <i class="iconfont icon-user"></i>{{ userStore.userInfo.account }}
                         </a>
                     </li>
                     <li>
-                        <el-popconfirm title="确定要退出吗?">
+                        <el-popconfirm title="确定要退出吗?" @confirm="confirm" confirm-button-text="确定" cancel-button-text="取消">
                             <template #reference>
                             <a href="javascript:;">退出登录</a>
                             </template>
@@ -24,6 +30,11 @@
                     <li><a href="javascript:;">我的订单</a></li>
                     <li><a href="javascript:;">会员中心</a></li>
                     <li><a href="javascript:;">关于我们</a></li>
+                </template>
+                <template v-else>
+                    <li><a href="javascript:;" @click="$router.push('/login')">请先登录</a></li>    
+                    <li><a href="javascript:;">帮助中心</a></li>    
+                    <li><a href="javascript:;">关于我们</a></li>    
                 </template>
             </ul>
         </div>

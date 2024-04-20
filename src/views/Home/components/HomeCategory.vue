@@ -2,6 +2,7 @@
 import { useCategoryStore } from '@/stores/categoryStore';
 
 const categoryStore=useCategoryStore()
+// console.log();
 </script>
 
 <template>
@@ -9,7 +10,7 @@ const categoryStore=useCategoryStore()
     <ul class="menu">
       <li v-for="item in categoryStore.categoryList" :key="item">
         <router-link to="/">{{item.name}}</router-link >
-        <RouterLink v-for="i in item.children.slice(0, 2)" :key="i.id" to="/">{{i.name}}</RouterLink>
+        <RouterLink v-for="i in item.children?.slice(0, 2)" :key="i.id" to="/">{{i.name}}</RouterLink>
 
         <!-- 弹层layer -->
         <div class="layer">
