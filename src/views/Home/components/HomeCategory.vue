@@ -59,7 +59,7 @@ const categoryStore=useCategoryStore()
         color: #fff;
 
         &:first-child{
-          font-size: 14px;
+          font-size: 16px;
         }
       }
 

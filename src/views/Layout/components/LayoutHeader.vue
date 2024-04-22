@@ -84,10 +84,12 @@ const categoryStore=useCategoryStore()
         position: relative;
         border-bottom:1px solid #e7e7e7;
         line-height: 32px;
+        display: flex;
 
         .icon-search{
             font-size: 18px;
             margin-left: 5px;
+            // display: inline-block;
         }
         
         input{

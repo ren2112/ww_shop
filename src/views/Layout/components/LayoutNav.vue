@@ -1,9 +1,12 @@
 <script setup>
 import { useUserStore } from '@/stores/userStore';
+import { useCartStore } from '../../../stores/cartStore';
 import router from '@/router';
 const userStore=useUserStore()
+const cartStore=useCartStore()
 const confirm=()=>{
     userStore.clearUserInfo()
+    cartStore.clearCart()
     router.push('/login')
 }
 </script>
@@ -28,7 +31,7 @@ const confirm=()=>{
                         </el-popconfirm>
                     </li>
                     <li><a href="javascript:;">我的订单</a></li>
-                    <li><a href="javascript:;">会员中心</a></li>
+                    <li><a href="javascript:;" @click="$router.push('/member')">会员中心</a></li>
                     <li><a href="javascript:;">关于我们</a></li>
                 </template>
                 <template v-else>

@@ -33,10 +33,10 @@ http.interceptors.response.use(res=>{
 },e=>{
     loading.close()
     // 统一错误提示
-    ElMessage({type:'error',message:e.response.data.message})
+    ElMessage({type:'error',message:e.response?.data.message})
     // 401表示token失效
     const userStore=useUserStore()
-    if(e.response.status===401){
+    if(e.response?.status===401){
         userStore.clearUserInfo()
         router.push('/login')
     }
