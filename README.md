@@ -35,8 +35,6 @@ npm run build
 =======
 # ww_shop
 商城前端项目
->>>>>>> f8e8d103266f67ccb4353302c0aa8d7e08b79f84
->>>>>>> 330ff30 (4.11)
 # 展示图片
 ![img1](https://github.com/ren2112/ww_shop/blob/new-branch-name/%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/1.png)
 ![img2](https://github.com/ren2112/ww_shop/blob/new-branch-name/%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/2.png)
